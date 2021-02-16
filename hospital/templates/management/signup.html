@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp Page</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+ <h1>SignUp Page</h1>
+    {% if message %}
+    <h1>{{ message }}</h1>
+    {% endif %}
+    <fieldset>
+        <form method = 'POST' action = '{% url "signup" %}'>
+            {% csrf_token %}
+            <table>
+               <tr>
+                <td>User Name :</td>
+                <td><input type = 'text' name = 'username' id = 'username' autocomplete="off" required></td>
+                </tr>
+
+
+
+
+
+
+
+
+
+
+                <tr>
+                    <td>First Name :</td>
+                    <td><input type = 'text' name = 'first_name' id = 'first_name' autocomplete="off" required></td>
+                </tr>
+
+
+
+                <tr>
+                <td>Last Name :</td>
+                    <td><input type = 'text' name = 'last_name' id = 'last_name' autocomplete="off" required></td>
+                </tr>
+
+
+
+                <tr>
+                    <td>Email :</td>
+                    <td><input type = 'email' name = 'email' id = 'email' autocomplete="off" required></td>
+                </tr>
+
+
+
+
+
+
+
+
+
+
+
+                <tr>
+                    <td>Phone number :</td>
+      <td> <input name="phone" maxlength="10" pattern="\d{10}"  class="form-control" type="text"
+                        title="You can enter only 10 digits..." id = 'phone' autocomplete="off" required>
+      </td>
+                </tr>
+
+
+                <tr>
+                    <td>Password :</td>
+                    <td><input type = 'password' name = 'f_pass' id = 'f_pass' required></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password :</td>
+                    <td><input type = 'password' name = 'c_pass' id = 'c_pass' required></td>
+                </tr>
+
+
+
+
+                <tr>
+                <td><input type = 'submit' value = 'Submit' name = 'Submit' id = 'submit'></td>
+                </tr>
+                </table>
+        </form>
+    </fieldset>
+    <a href = '{% url "login" %}'>Already a member? SignIn Here</a><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
